@@ -19,6 +19,7 @@ function App() {
     <p className='score'>Score:</p>
     <p>Heres the next question..</p>
     <QuestionCard />
+    <button className='next' onClick={aglaSawal}>Next question</button>
     <p></p>
     </div>
   );
