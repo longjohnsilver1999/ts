@@ -9,6 +9,7 @@ function App() {
   const [userAnswers,setuseranswers]=useState([])
   const [score,setscore]=useState(0)
   const [gameover,setgameover]=useState(false)
+  const Totalques=10
   const shuruKiaJay=async ()=>{
 
   }
@@ -24,7 +25,11 @@ function App() {
     <button className='start' onClick={shuruKiaJay}>Kaun banega crorepati.Lets Play</button>
     <p className='score'>Score:</p>
     <p>Heres the next question..</p>
-    <QuestionCard {}/>
+    <QuestionCard 
+    questionNr={number+1}
+ totalQuestions={Totalques}
+    
+    />
     <button className='next' onClick={aglaSawal}>Next question</button>
     <p></p>
     </div>
