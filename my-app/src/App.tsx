@@ -28,7 +28,12 @@ function App() {
     <QuestionCard 
     questionNr={number+1}
  totalQuestions={Totalques}
-    
+ question={questions[number].question}
+ answer={questions[number].answers}
+ userAnswer={userAnswers?userAnswers[number]:undefined}
+ callback={LockKardiaJay}
+ userAnswer={}
+
     />
     <button className='next' onClick={aglaSawal}>Next question</button>
     <p></p>

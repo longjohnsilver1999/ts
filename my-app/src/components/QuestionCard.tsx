@@ -3,7 +3,7 @@ type Props={
     question:string;
     answer:string[];
     callback:any;
-    userAnswer:boolean;
+    userAnswer:any;
     questionNr:number;
     totalQuestions:number;
 }
