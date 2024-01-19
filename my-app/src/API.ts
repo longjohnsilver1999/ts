@@ -5,5 +5,6 @@ HARD="hard"
 }
 
 export const fetchQuizQuestions=async(amount:number,difficulty:Difficulty)=>{
-    const endpont=`https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}`
+    const endpont=`https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple`;
+    const data=await (await fetch)
 }
