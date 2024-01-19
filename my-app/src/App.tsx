@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
 import QuestionCard from './components/QuestionCard';
 import './App.css';
-
+import { computerJi } from './API';
+import { Difficulty } from './API';
 function App() {
   const [loading,setloading]=useState(false)
   const [questions,setquestions]=useState([])
@@ -10,6 +11,8 @@ function App() {
   const [score,setscore]=useState(0)
   const [gameover,setgameover]=useState(false)
   const Totalques=10
+  console.log(computerJi(Totalques,Difficulty.EASY))
+
   const shuruKiaJay=async ()=>{
 
   }
