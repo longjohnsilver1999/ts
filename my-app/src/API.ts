@@ -22,7 +22,9 @@ export const computerJi=async(amount:number,difficulty:Difficulty)=>{
     return data.results.map((question:Question)=>(
         {
             ...question,
-            answer:
+            answer:shuffleArray([
+                ...question.incorrect_answer,question.correct_answer
+            ])
         }
     ));
 }
