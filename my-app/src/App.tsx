@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import QuestionCard from "./components/QuestionCard";
 import "./App.css";
 import { computerJi } from "./API";
@@ -18,9 +18,22 @@ function App() {
   const [score, setscore] = useState(0);
   const [gameover, setgameover] = useState(false);
   const Totalques = 10;
-  console.log(computerJi(Totalques, Difficulty.EASY));
+  // console.log(computerJi(Totalques, Difficulty.EASY));
 
-  const shuruKiaJay = async () => {};
+  const shuruKiaJay = async () => {
+    setloading(true);
+    setgameover(false);
+    const newQuestions = await computerJi(Totalques, Difficulty.MEDIUM);
+    setquestions(newQuestions);
+    console.log(newQuestions);
+    setscore(0);
+    setuseranswers([]);
+    setloading(false);
+  };
+
+  useEffect(() => {
+    shuruKiaJay();
+  }, []);
   const LockKardiaJay = (e: React.MouseEvent<HTMLButtonElement>) => {};
   const aglaSawal = () => {};
   return (
