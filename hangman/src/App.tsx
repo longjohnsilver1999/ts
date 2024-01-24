@@ -1,5 +1,7 @@
 import { useState } from 'react'
-
+import {HangManDrawing} from './HangManDrawing'
+import {HangManWord} from './HangManWord'
+import {Keyboard} from './Keyboard'
 import './App.css'
 
 function App() {
