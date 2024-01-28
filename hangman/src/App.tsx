@@ -18,6 +18,7 @@ const [guessedword,setguessedword]=useState<String[]>([])
       alignItems:"center",
     }}
     >
+      <div className="dummy"/>
       <div style={{fontSize:"2rem",textAlign:"center"}}>Lose Win</div>        
       <HangManDrawing />
       <HangManWord />
