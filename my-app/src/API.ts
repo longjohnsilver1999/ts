@@ -30,3 +30,17 @@ export const computerJi = async (amount: number, difficulty: Difficulty) => {
     }));
   }
 };
+
+export const computerJi = async (amount: number, difficulty: Difficulty) => {
+  const endpont = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple`;
+  const data = await (await fetch(endpont)).json();
+  console.log(data);
+  if (data.results) {
+    return data?.results?.map((question: Question) => ({
+      ...question,
+      answers: shuffleArray([
+        ...question.incorrect_answers,
+        question.correct_answer,
+      ]),
+    }));
+  }
