@@ -1,5 +1,7 @@
 const HangManWord=()=>{
+return <div style={{display:"flex",gap:".25em",fontSize:"6rem"}}>
 
+</div>
 }
 export default HangManWord
 
