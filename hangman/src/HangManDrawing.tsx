@@ -15,12 +15,18 @@ const RIGHT_ARM=(
     <div style={{width:"100px",height:"10px",background:"black",position:"absolute",top:"150px",right:"-100px",rotate:"-30deg",transformOrigin:"left bottom" }} />
 )
 
+const RIGHT_LEG=(
+    <div style={{width:"100px",height:"10px",background:"black",position:"absolute",top:"150px",right:"10px",rotate:"30deg",transformOrigin:"right bottom" }} />
+)
+
 const HangManDrawing=()=>{
     return (
     <>
     <div style={{position:"relative"}}>
         {HEAD}
-        {BODY}{RIGHT_ARM}
+        {BODY}
+        {RIGHT_ARM}
+        {RIGHT_LEG}
     <div style={{height:"50px",width:"10px",background:"black",top:0,right:0,position:"absolute"}} />
     <div style={{height:"10px",width:"200px",background:"black",marginLeft:"120px"}} />
         <div style={{height:"400px",width:"10px",background:"black",marginLeft:"120px"}} />
