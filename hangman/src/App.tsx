@@ -22,7 +22,8 @@ const [guessedword,setguessedword]=useState<String[]>([])
       <div style={{fontSize:"2rem",textAlign:"center"}}>Lose Win</div>        
       <HangManDrawing />
       <HangManWord />
-      <Keyboard />
+      <div style={{alignSelf:"stretch"}}>
+      <Keyboard /></div>
     </div>
   )
 }
