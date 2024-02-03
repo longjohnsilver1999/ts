@@ -30,7 +30,7 @@ const KEYS = [
 const Keyboard=()=>{
 return <div style={{display:"grid",gridTemplateColums:"repeat(auto-fit,minmax(75px,1fr))",gap:".5rem"}}>
 {KEYS.map(key=>{
-  return <button key={key}>{key}</button>
+  return <button className="" key={key}>{key}</button>
 })}
 </div>
 
